@@ -1,30 +1,40 @@
-# vue-test
+# Cz-Portal-Front-Shop
 
-> A Vue.js project
+## Introduction
 
-## Build Setup
+- This project is the front page for Cz-Portal's Index , need the backend service [Cz-Portal-Server](https://github.com/jomalonejia/Cz-Portal-Server)
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+## stack
+* vue
+* vue-router
+* vuex
+* zepto
+* ...
 
-# build for production with minification
-npm run build
+## Install
 
-# build for production and view the bundle analyzer report
-npm run build --report
+    $ git clone https://github.com/jomalonejia/Cz-Portal-Front-Index.git
+    $ cd Cz-Portal-Front-Index
+    $ npm install
 
-# run unit tests
-npm run unit
 
-# run e2e tests
-npm run e2e
+## Start
 
-# run all tests
-npm test
-```
+    $ npm start
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Build
+
+    $ npm run build
+
+## Seceenshots
+
+    ....
+
+## Authors
+
+* **[Jomalone Jia](https://github.com/jomalonejia)**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for detailsme you start the app, you get automatic refresh in the browser whenever you update a file.
