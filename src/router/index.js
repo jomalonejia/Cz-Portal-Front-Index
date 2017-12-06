@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Index from '../index.vue'
 
 Vue.use(Router)
 
@@ -7,8 +8,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: r => require.ensure([], () => r(require('../pages/home/home')), 'home')
+      component: Index,
+      children: [
+        {
+          path: '/',
+          component: r => require.ensure([], () => r(require('../pages/home/home')), 'home')
+        }
+      ]
     }
   ]
 })

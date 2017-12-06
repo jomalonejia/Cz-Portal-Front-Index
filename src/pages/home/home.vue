@@ -1,28 +1,32 @@
 <template>
   <div>
-    <TopHeader></TopHeader>
-    <NavHeader></NavHeader>
+    <TopHeader :isMenuOpen="menuToggleStatus"
+               :toggleMenu="toggleMenu"></TopHeader>
     <News></News>
   </div>
 </template>
 
 <script>
+  import { mapGetters, mapActions } from 'vuex'
   import TopHeader from '@/components/topHeader/TopHeader.vue'
-  import NavHeader from '@/components/navHeader/NavHeader.vue'
   import News from '@/components/news/News.vue'
 
   export default {
     name: 'home',
+    computed: {
+      ...mapGetters({
+        menuToggleStatus: 'menuToggleStatus'
+      })
+    },
+    methods: mapActions([
+      'toggleMenu'
+    ]),
     components: {
       TopHeader,
-      NavHeader,
       News
     }
   }
 </script>
 
 <style lang="scss">
-  ul{
-    list-style: none;
-  }
 </style>
