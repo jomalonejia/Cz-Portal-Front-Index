@@ -1,32 +1,55 @@
 <template>
-  <div>
-    <TopHeader :isMenuOpen="menuToggleStatus"
-               :toggleMenu="toggleMenu"></TopHeader>
-    <News></News>
+  <div class="homepage">
+    <TopHeader
+
+      :isMenuOpen="menuToggleStatus"
+      :toggleMenu="toggleMenu"></TopHeader>
+    <MainContent :isMenuOpen="menuToggleStatus"></MainContent>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
+  import $ from 'webpack-zepto'
   import { mapGetters, mapActions } from 'vuex'
   import TopHeader from '@/components/topHeader/TopHeader.vue'
-  import News from '@/components/news/News.vue'
+  import MainContent from '@/components/mainContent/MainContent.vue'
+  import FooterComponent from '@/components/footer/FooterComponent.vue'
 
   export default {
     name: 'home',
+    data () {
+      return {
+        hideHeader: false
+      }
+    },
     computed: {
       ...mapGetters({
         menuToggleStatus: 'menuToggleStatus'
       })
     },
-    methods: mapActions([
-      'toggleMenu'
-    ]),
+    methods: {
+      ...mapActions(['toggleMenu', 'closeMenu'])
+    },
     components: {
       TopHeader,
-      News
+      MainContent,
+      FooterComponent
+    },
+    mounted () {
+      $(window).on('scroll', () => {
+        this.closeMenu()
+      })
+    },
+    beforeDestory () {
+      $(window).off('scroll')
     }
   }
 </script>
 
-<style lang="scss">
+<style lang="css">
+  .homepage {
+    display: flex;
+    flex-direction: column;
+  }
 </style>
