@@ -15,6 +15,10 @@ export default new Router({
           component: r => require.ensure([], () => r(require('../pages/home/home')), 'home')
         },
         {
+          path: '/collections',
+          component: r => require.ensure([], () => r(require('../pages/collections/collections')), 'collections')
+        },
+        {
           path: '/test',
           component: r => require.ensure([], () => r(require('../pages/test/test')), 'test')
         }

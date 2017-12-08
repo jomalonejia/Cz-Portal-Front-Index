@@ -1,20 +1,12 @@
 <template>
   <div class="homepage">
-    <TopHeader
-
-      :isMenuOpen="menuToggleStatus"
-      :toggleMenu="toggleMenu"></TopHeader>
     <MainContent :isMenuOpen="menuToggleStatus"></MainContent>
-    <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
-  import $ from 'webpack-zepto'
-  import { mapGetters, mapActions } from 'vuex'
-  import TopHeader from '@/components/topHeader/TopHeader.vue'
-  import MainContent from '@/components/mainContent/MainContent.vue'
-  import FooterComponent from '@/components/footer/FooterComponent.vue'
+  import { mapGetters } from 'vuex'
+  import MainContent from './components/mainContent/MainContent.vue'
 
   export default {
     name: 'home',
@@ -28,21 +20,8 @@
         menuToggleStatus: 'menuToggleStatus'
       })
     },
-    methods: {
-      ...mapActions(['toggleMenu', 'closeMenu'])
-    },
     components: {
-      TopHeader,
-      MainContent,
-      FooterComponent
-    },
-    mounted () {
-      $(window).on('scroll', () => {
-        this.closeMenu()
-      })
-    },
-    beforeDestory () {
-      $(window).off('scroll')
+      MainContent
     }
   }
 </script>

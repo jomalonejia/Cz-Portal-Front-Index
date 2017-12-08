@@ -1,8 +1,9 @@
 <template>
-  <main :class="isMenuOpen ? 'openedMain' : 'closedMain' ">
+  <main>
     <div class="inner">
       <div class="img-block">
         <img src="static/images/view.gif"/>
+        <div class="logo" :style="{top:logoPosition}"><img src="static/images/qie.png"></div>
       </div>
       <div class="frontPage-blocks">
         <div class="block-wrapper">
@@ -60,18 +61,15 @@
 </template>
 
 <script>
-  import CzImage from '@/components/components/cz-image/CzImage.vue'
   export default {
-    props: {
-      isMenuOpen: Boolean
-    },
     data () {
       return {
-        imgHeight: 100
+        imgHeight: 100,
+        logoPosition: '-20%'
       }
     },
-    components: {
-      CzImage
+    mounted () {
+      setTimeout(() => { this.logoPosition = '20%' }, 600)
     }
   }
 </script>

@@ -13,11 +13,11 @@
       <div class="main-menu-wrapper" :class="isMenuOpen ? 'openedMenu' : 'closedMenu'">
         <div class="list-aligner">
           <ul>
-            <li><router-link :to="'/'">Home</router-link></li>
-            <li><router-link :to="'/menu'">Menu</router-link></li>
+            <li><span class="list-aligner-url" @click="navigate('/')">Home</span></li>
+            <li><span class="list-aligner-url" @click="navigate('/collections')">Collections</span></li>
             <li><a href="http://localost:4201" target="_blank">Shop</a></li>
-            <li><router-link :to="'/press'">Press</router-link></li>
-            <li><router-link :to="'/about'">About</router-link></li>
+            <li><span class="list-aligner-url" @click="navigate('/press')">Press</span></li>
+            <li><<span class="list-aligner-url" @click="navigate('/about')">About</span></li>
           </ul>
         </div>
       </div>
@@ -27,14 +27,20 @@
 
 <script>
   export default {
+    props: {
+      isMenuOpen: Boolean,
+      toggleMenu: Function
+    },
     data () {
       return {
         msg: 'Welcome to Your Vue.js App'
       }
     },
-    props: {
-      isMenuOpen: Boolean,
-      toggleMenu: Function
+    methods: {
+      navigate (url) {
+        this.toggleMenu()
+        this.$router.push(url)
+      }
     }
   }
 </script>
@@ -42,12 +48,14 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   @import "topHeader";
-  .header-hide{
+
+  .header-hide {
     transform: matrix(1, 0, 0, 1, 0, -80);
     transition: 1s;
   }
-  .header-show{
-    transform:  matrix(1, 0, 0, 1, 0, 0);
+
+  .header-show {
+    transform: matrix(1, 0, 0, 1, 0, 0);
     transition: 1s;
   }
 </style>

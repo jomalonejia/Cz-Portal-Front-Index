@@ -1,0 +1,70 @@
+.collections-slider-area {
+  width: 75%;
+  margin: 0 auto;
+  .slider-container {
+    display: -webkit-box;
+    width: 50%;
+    height: 715px;
+    transform: translateZ(0);
+    .slider-left {
+      height: 100%;
+      overflow: hidden;
+    }
+    .slider-right {
+      height: 100%;
+      overflow: hidden;
+    }
+    .slider-toggle-area {
+      top: 20%;
+      left: 50%;
+      background: #fff;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: flex;
+      left: 102%;
+    }
+  }
+}
+
+.slider-toggle-btn {
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+}
+
+.left-button {
+  .slider-arrow-left {
+    transition: 1s;
+  }
+  &:hover {
+    .slider-arrow-left {
+      margin-right: 25px;
+      transition: 1s;
+    }
+  }
+}
+
+.right-button {
+  .slider-arrow-right {
+    transition: 1s;
+  }
+  &:hover {
+    .slider-arrow-right {
+      margin-left: 25px;
+      transition: 1s;
+    }
+  }
+}
+
+.slider-image {
+  transition: 1s;
+  img {
+    width: 534px;
+    height: 712px;
+  }
+}

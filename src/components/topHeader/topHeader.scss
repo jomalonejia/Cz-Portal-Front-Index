@@ -78,12 +78,15 @@
       top: 50%;
       transform: translateY(-50%);
       padding: 0 0 20px 0;
-      a {
+      .list-aligner-url, a{
         font-size: 38px;
         margin-bottom: 10px;
         display: inline-block;
         color: #3D3C3A;
         transition: color .2s ease-out;
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }
