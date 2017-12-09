@@ -1,5 +1,8 @@
 <template>
   <div class="collections-slider-area">
+    <div class="test">
+
+    </div>
     <div class="slider-container">
       <div :class="index == 0 ? 'slider-left' : 'slider-right'" v-for="(images, index) in sliderImages">
         <div class="slider-image"
