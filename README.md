@@ -29,7 +29,16 @@
 
 ## Seceenshots
 
-    ....
+
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/homepage_1.png)<br />
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/ihomepage_2.png)<br />
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/homepage_3.png)<br />
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/collection_1.png)<br />
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/collection_2.png)<br />
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/collection_3.png)<br />
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/collection_4.png)<br />
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/info_1.png)<br />
+![image](https://github.com/jomalonejia/Cz-Portal-Front-Index/blob/master/screenshots/footer.png)<br />
 
 ## Authors
 

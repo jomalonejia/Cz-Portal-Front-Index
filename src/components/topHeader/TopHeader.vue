@@ -16,8 +16,8 @@
             <li><span class="list-aligner-url" @click="navigate('/')">Home</span></li>
             <li><span class="list-aligner-url" @click="navigate('/collections')">Collections</span></li>
             <li><a href="http://localost:4201" target="_blank">Shop</a></li>
-            <li><span class="list-aligner-url" @click="navigate('/press')">Press</span></li>
-            <li><<span class="list-aligner-url" @click="navigate('/about')">About</span></li>
+            <li><span class="list-aligner-url" @click="navigate('/info')">Info</span></li>
+            <li><span class="list-aligner-url" @click="navigate('/about')">About</span></li>
           </ul>
         </div>
       </div>

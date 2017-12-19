@@ -15,7 +15,7 @@
       overflow: hidden;
     }
     .slider-toggle-area {
-      top: 20%;
+      top: 50%;
       left: 50%;
       background: #fff;
       transform: translate(-50%, -50%);
@@ -69,9 +69,9 @@
   }
 }
 
-@keyframes rainbow {
+/*@keyframes rainbow {
   0% {
-    background: #c00;
+    background: #ffffff;
   }
   50% {
     background: orange;
@@ -88,4 +88,4 @@
   &:hover{
     animation: 1s rainbow;
   }
-}
+}*/
